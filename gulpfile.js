@@ -47,6 +47,28 @@ gulp.task('compile', function () {
   return merge(tasks);
 });
 
+gulp.task('upload', function (callback) {
+  Promise.all(
+    listChildDirectoryPaths(functionsPath).map(function (directoryPath) {
+      return new Promise(function (resolve, reject) {
+        awsLambda.deploy(
+          directoryPath + '/dist.zip',
+          {
+            functionName: directoryPath.split('/').pop(),
+            handler: 'index.handler',
+            region: 'us-east-1',
+            role: 'arn:aws:iam::549958975024:role/myFirstRole',
+            timeout: 60
+          },
+          resolve
+        );
+      });
+    })
+  ).then(function () {
+    callback();
+  });
+});
+
 gulp.task('zip', function () {
   var tasks = listChildDirectoryPaths(functionsPath).map(function (directoryPath) {
     return gulp.src([directoryPath + '/dist/**/*'])

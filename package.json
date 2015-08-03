@@ -6,6 +6,7 @@
     "clean": "gulp clean",
     "compile": "gulp compile",
     "deploy": "node script/deploy.js",
+    "upload": "gulp upload",
     "zip": "gulp zip"
   },
   "dependencies": {},

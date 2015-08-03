@@ -14,6 +14,8 @@ Scripts available in api-gateway-lambda-example via `npm run-script`:
     gulp compile
   deploy
     node script/deploy.js
+  upload
+    gulp upload
   zip
     gulp zip
 ```
