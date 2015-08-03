@@ -1,0 +1,9 @@
+{
+  "name": "function1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "stackable-fetcher": "^0.3.0"
+  }
+}
