@@ -8,15 +8,16 @@
     "deploy": "node script/deploy.js",
     "zip": "gulp zip"
   },
-  "dependencies": {
-    "amazon-api-gateway-client": "0.0.3"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "amazon-api-gateway-client": "^0.1.0",
+    "aws-sdk": "^2.1.42",
     "del": "^1.2.0",
     "gulp": "^3.9.0",
     "gulp-install": "^0.4.0",
     "gulp-zip": "^3.0.2",
     "merge-stream": "^0.1.8",
-    "node-aws-lambda": "^0.1.2"
+    "node-aws-lambda": "^0.1.2",
+    "stackable-fetcher": "^0.3.0"
   }
 }
