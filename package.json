@@ -9,7 +9,9 @@
     "upload": "gulp upload",
     "zip": "gulp zip"
   },
-  "dependencies": {},
+  "dependencies": {
+    "api-composer": "0.0.1"
+  },
   "devDependencies": {
     "amazon-api-gateway-client": "^0.1.0",
     "aws-sdk": "^2.1.42",
